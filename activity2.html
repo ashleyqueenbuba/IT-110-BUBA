@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn With Me!</title>
+</head>
+
+<body>
+
+<header id="main-heading">
+
+    <h1>Learn With Me!</h1>
+
+    <p>
+        Welcome to <strong>My Page!</strong> 
+        This page is a simple introduction to some useful HTML concepts.
+    </p>
+
+    <p>
+        Explore the sections below and learn how images, hyperlinks,
+        multimedia, and HTML tags can make a webpage more interactive.
+    </p>
+
+</header>
+
+<!--Image Section -->
+<hr>
+<section id="images">
+
+    <h2>1. Images</h2>
+
+    <p>
+        Images can make a webpage more interesting and easier to understand.
+        For this example, I used food pictures to show how images can be added
+        and described using HTML.
+    </p>
+
+
+    <!-- First image -->
+    <img src="garlicbutterbread.jpg"
+         alt="Garlic butter bread"
+         width="200">
+
+
+    <!-- Second image -->
+    <img src="pizzaaaa.jpg"
+         alt="A whole pizza"
+         width="200">
+
+
+    <!-- Third image using figure and figcaption -->
+    <figure>
+
+        <img src="pizzaaaaaa.jpg"
+             alt="Pizza complete order."
+             width="200">
+
+        <figcaption>
+            Sample food pictures that can be used as part of a simple menu.
+        </figcaption>
+
+    </figure>
+
+</section>
+
+<!--Hyperlinks -->
+<hr>
+<section id="hyperlinks">
+
+    <h2>2. Hyperlinks</h2>
+
+    <p>
+        Hyperlinks allow users to move from one section of a webpage
+        to another or visit other websites and resources.
+    </p>
+
+
+    <!-- Internal link -->
+    <p>
+        <a href="#multimedia">
+            Go to the Multimedia section
+        </a>
+    </p>
+
+
+    <!-- External link that opens in a new tab -->
+    <p>
+        <a href="https://www.youtube.com/"
+           target="_blank">
+            Visit YouTube to watch videos
+        </a>
+    </p>
+
+
+    <!-- Email link -->
+    <p>
+        <a href="mailto:ashleyqueenbuba@gmail.com">
+            Contact me through email
+        </a>
+    </p>
+
+
+    <!-- Same-page anchor link -->
+    <p>
+        <a href="#useful-tags">
+            Jump to the Useful HTML Tags section
+        </a>
+    </p>
+
+</section>
+<hr>
+<!--Multimedia Section -->
+
+<section id="multimedia">
+
+    <h2>3. Multimedia</h2>
+
+    <p>
+        Multimedia allows us to add different types of content,
+        such as audio and video, to make a webpage more engaging.
+    </p>
+
+
+    <h3>Sample Audio</h3>
+
+    <p>
+        Click the play button below to listen to the sample audio.
+    </p>
+
+    <audio controls>
+
+        <source src="PUEDE NANG MANGARAP.mp3"
+                type="audio/mpeg">
+
+        Your browser does not support the audio element.
+
+    </audio>
+
+
+    <h3>Sample Video</h3>
+
+    <p>
+        You can also add videos to provide another way of presenting information.
+    </p>
+
+    <video width="300" controls>
+
+        <source src="video.mp4"
+                type="video/mp4">
+
+        Your browser does not support the video element.
+
+    </video>
+
+</section>
+
+<!--Useful Tags -->
+<hr>
+<section id="useful-tags">
+
+    <h2>4. Useful HTML Tags</h2>
+
+    <p>
+        HTML has many useful tags that help us organize,
+        highlight, and present information on a webpage.
+    </p>
+
+
+    <!-- I chose blockquote to make the learning tip stand out from the rest of the content. -->
+    <blockquote>
+        "Small progress is still progress. Keep learning one step at a time!"
+    </blockquote>
+
+
+    <!-- I chose mark to emphasize the most important part of the tip. -->
+    <p>
+        My simple tip: <mark>try things out instead of being afraid to make mistakes.</mark>
+    </p>
+
+    <!-- I chose abbr to show the meaning of a commonly used term. -->
+    <p>
+        I am currently exploring <abbr title="HyperText Markup Language">HTML</abbr>
+        and learning how different tags work together.
+    </p>
+
+    <!-- I chose code to show how a simple HTML element looks when written as code. -->
+    <p>
+        One small example is:
+        <code>&lt;p&gt;Hello, world!&lt;/p&gt;</code>
+    </p>
+
+
+    <!-- I chose a character entity to show a simple ownership notice for the webpage. -->
+    <p>
+    &copy; 2026 Ashley Buba
+    </p>
+
+</section>
+
+
+<hr>
+<!--HTML DOM-->
+
+<section id="html-DOM">
+
+    <h2>5. HTML DOM</h2>
+
+    <p id="day-intro">
+        If I could plan a simple day for myself, I would fill it with
+        good food, music, and time to enjoy the little things.
+    </p>
+
+    <div id="day-plan">
+
+        <h3>My Simple Plan</h3>
+
+        <ol id="favorite-routine">
+
+            <li>Start the day with a good breakfast</li>
+            <li>Listen to my favorite songs</li>
+            <li>Go out and take some photos</li>
+            <li>End the day with good food</li>
+
+        </ol>
+
+    </div>
+
+</section>
+
+<!--
+- The section with the id "html-DOM" is the main parent that holds the content of this part of the page.
+- The paragraph with the id "day-intro" is a child of the section because it is placed directly inside it.
+- The div with the id "day-plan" is also a child of the section and contains the heading and ordered list.
+- The ol element is the parent of the four li elements, which represent the different parts of the day.
+- This shows how HTML elements can be placed inside other elements to create a clear parent-child structure.
+-->
+
+</body>
+
+</html>
