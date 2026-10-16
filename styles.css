@@ -1,0 +1,275 @@
+
+/* =================================
+   1. RESET AND BASIC STYLES
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f0f4f8;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cascade example:
+   The second h1 rule wins because both selectors
+   have equal specificity and the second is later. */
+h1 {
+    color: red;
+    text-align: left;
+}
+
+/* =================================
+   2. HEADER AND NAVIGATION
+================================= */
+
+header {
+    text-align: center;
+    color: rgb(29, 22, 22);
+    background: linear-gradient(135deg, #6f3b83, #d36dc2, #f29ac2);
+    background-color: #c96ec1;
+    padding: 25px;
+    margin: 0 auto 30px;
+    max-width: 1200px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    color: #2e1825;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    margin-top: 22px;
+    text-align: left;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 4px;
+    background-color: white;
+    color: #162756;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: #984a82;
+    color: white;
+    box-shadow: 0 5px 12px rgba(60, 50, 100, 0.08);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #311a32;
+    color: white;
+}
+
+/* =================================
+   3. PROFILE CARDS
+================================= */
+
+.card {
+    width: 500px;
+    max-width: 100%;
+    padding: 20px;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    background-color: white;
+    margin: 0 auto 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*
+Box Model Calculation:
+With box-sizing: border-box:
+Total rendered width = 500px.
+Content width = 500px - 40px padding - 4px borders
+              = 456px.
+With box-sizing: content-box:
+Total rendered width = 500px + 40px padding + 4px borders
+                     = 544px.
+*/
+
+#about {
+    position: relative;
+    padding-top: 30px;
+    border-color: #984a82;
+}
+
+/* Badge using absolute positioning */
+#about::after {
+    content: "PROFILE";
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background-color: #c575b1;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Descendant selector */
+.card p {
+    margin-bottom: 10px;
+}
+
+.intro::first-letter {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #984a82;
+}
+
+/* Class selector */
+.intro {
+    color: #2e2c2c;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: justify;
+}
+
+
+/* ID selector */
+#about h2 {
+    color: #2e1825;
+}
+
+/* =================================
+   4. SKILLS AND FLEXBOX
+================================= */
+
+.skills-list {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Child selector */
+.skills-list > li {
+    list-style: none;
+    background-color: #b3538e;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* =================================
+   5. DISPLAY AND VISIBILITY
+================================= */
+
+/* Disappears and leaves no gap */
+.hide-none {
+    display: none;
+}
+
+/* Invisible but keeps its space */
+.hide-visibility {
+    visibility: hidden;
+}
+
+/* The first hidden paragraph takes no space.
+   The second hidden paragraph keeps its space. */
+
+/* =================================
+   6. SCROLL BOX
+================================= */
+
+.scroll-box {
+    height: 180px;
+    overflow: auto;
+    text-align: justify;
+}
+
+/* =================================
+   7. FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: hwb(309 18% 56%);
+    padding: 10px;
+    margin: 30px auto 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ==========================================
+For highlighting the chosen nav bar on header
+============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Highlight the section selected from navigation */
+.card:target {
+    border: 2px solid #d36dc2;
+    background: linear-gradient(135deg, #fff0fb, #ffffff);
+    box-shadow: 0 0 25px rgba(211, 109, 194, 0.35);
+    transform: translateY(-4px);
+    transition: all 0.4s ease;
+}
+
+/* Highlight the selected section heading */
+.card:target h2 {
+    color: #8e44ad;
+}
+/* =================================
+   8. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 540px) {
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* =================================
+   REFLECTION QUESTIONS
+
+1. The second h1 rule takes effect because both rules have the same
+specificity, but the second one is written later in the CSS file.
+When two rules have equal specificity, the browser follows the one
+that comes last.
+
+2. If I use content-box, the total width of the card becomes 544px
+because the padding and borders are added to the original 500px width.
+With border-box, the total width stays at 500px because the padding
+and borders are already included.
+
+3. I would use visibility: hidden if I want to hide something but
+keep its space on the page. On the other hand, I would use display:
+none if I want to hide the element and remove the space it occupies.
+================================= */
